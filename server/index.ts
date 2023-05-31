@@ -104,6 +104,7 @@ app
     if (settings.main.trustProxy) {
       server.enable('trust proxy');
     }
+    server.set('base', '/overseerr');
     server.use(cookieParser());
     server.use(express.json());
     server.use(express.urlencoded({ extended: true }));
