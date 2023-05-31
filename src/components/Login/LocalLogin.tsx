@@ -1,11 +1,11 @@
 import Button from '@app/components/Common/Button';
 import SensitiveInput from '@app/components/Common/SensitiveInput';
 import useSettings from '@app/hooks/useSettings';
+import axios from '@app/marcoshax/axiosproxy';
 import {
   ArrowLeftOnRectangleIcon,
   LifebuoyIcon,
 } from '@heroicons/react/24/outline';
-import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import Link from 'next/link';
 import { useState } from 'react';

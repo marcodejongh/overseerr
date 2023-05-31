@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import useSettings from '@app/hooks/useSettings';
 import { useUser } from '@app/hooks/useUser';
-import axios from 'axios';
+import axios from '@app/marcoshax/axiosproxy';
 import { useEffect } from 'react';
 
 const ServiceWorkerSetup = () => {

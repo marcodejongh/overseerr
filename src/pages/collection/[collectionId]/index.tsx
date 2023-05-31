@@ -1,6 +1,6 @@
 import CollectionDetails from '@app/components/CollectionDetails';
+import axios from '@app/marcoshax/axiosproxy';
 import type { Collection } from '@server/models/Collection';
-import axios from 'axios';
 import type { GetServerSideProps, NextPage } from 'next';
 
 interface CollectionPageProps {

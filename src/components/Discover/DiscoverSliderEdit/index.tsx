@@ -8,6 +8,7 @@ import CreateSlider from '@app/components/Discover/CreateSlider';
 import GenreTag from '@app/components/GenreTag';
 import KeywordTag from '@app/components/KeywordTag';
 import globalMessages from '@app/i18n/globalMessages';
+import axios from '@app/marcoshax/axiosproxy';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import {
   ArrowUturnLeftIcon,
@@ -19,7 +20,6 @@ import {
 } from '@heroicons/react/24/solid';
 import { DiscoverSliderType } from '@server/constants/discover';
 import type DiscoverSlider from '@server/entity/DiscoverSlider';
-import axios from 'axios';
 import { useRef, useState } from 'react';
 import { useDrag, useDrop } from 'react-aria';
 import { defineMessages, useIntl } from 'react-intl';

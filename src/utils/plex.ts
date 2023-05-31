@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '@app/marcoshax/axiosproxy';
 import Bowser from 'bowser';
 
 interface PlexHeaders extends Record<string, string> {

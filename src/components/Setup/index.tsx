@@ -9,7 +9,7 @@ import SettingsServices from '@app/components/Settings/SettingsServices';
 import LoginWithPlex from '@app/components/Setup/LoginWithPlex';
 import SetupSteps from '@app/components/Setup/SetupSteps';
 import useLocale from '@app/hooks/useLocale';
-import axios from 'axios';
+import axios from '@app/marcoshax/axiosproxy';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';

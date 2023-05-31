@@ -4,6 +4,7 @@ import Tooltip from '@app/components/Common/Tooltip';
 import RegionSelector from '@app/components/RegionSelector';
 import { encodeURIExtraParams } from '@app/hooks/useDiscover';
 import useSettings from '@app/hooks/useSettings';
+import axios from '@app/marcoshax/axiosproxy';
 import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/20/solid';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import type {
@@ -17,7 +18,6 @@ import type {
   ProductionCompany,
   WatchProviderDetails,
 } from '@server/models/common';
-import axios from 'axios';
 import { orderBy } from 'lodash';
 import { useEffect, useMemo, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';

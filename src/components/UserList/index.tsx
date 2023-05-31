@@ -14,6 +14,7 @@ import { useUpdateQueryParams } from '@app/hooks/useUpdateQueryParams';
 import type { User } from '@app/hooks/useUser';
 import { Permission, UserType, useUser } from '@app/hooks/useUser';
 import globalMessages from '@app/i18n/globalMessages';
+import axios from '@app/marcoshax/axiosproxy';
 import { Transition } from '@headlessui/react';
 import {
   BarsArrowDownIcon,
@@ -25,7 +26,6 @@ import {
 } from '@heroicons/react/24/solid';
 import type { UserResultsResponse } from '@server/interfaces/api/userInterfaces';
 import { hasPermission } from '@server/lib/permissions';
-import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

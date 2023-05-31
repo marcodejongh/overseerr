@@ -1,6 +1,6 @@
 import TvDetails from '@app/components/TvDetails';
+import axios from '@app/marcoshax/axiosproxy';
 import type { TvDetails as TvDetailsType } from '@server/models/Tv';
-import axios from 'axios';
 import type { GetServerSideProps, NextPage } from 'next';
 
 interface TvPageProps {

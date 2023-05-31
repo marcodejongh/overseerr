@@ -7,6 +7,7 @@ import PageTitle from '@app/components/Common/PageTitle';
 import Table from '@app/components/Common/Table';
 import useLocale from '@app/hooks/useLocale';
 import globalMessages from '@app/i18n/globalMessages';
+import axios from '@app/marcoshax/axiosproxy';
 import { formatBytes } from '@app/utils/numberHelpers';
 import { Transition } from '@headlessui/react';
 import { PlayIcon, StopIcon, TrashIcon } from '@heroicons/react/24/outline';
@@ -16,7 +17,6 @@ import type {
   CacheResponse,
 } from '@server/interfaces/api/settingsInterfaces';
 import type { JobId } from '@server/lib/settings';
-import axios from 'axios';
 import cronstrue from 'cronstrue/i18n';
 import { Fragment, useReducer, useState } from 'react';
 import type { MessageDescriptor } from 'react-intl';

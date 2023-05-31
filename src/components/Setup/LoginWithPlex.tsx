@@ -1,6 +1,6 @@
 import PlexLoginButton from '@app/components/PlexLoginButton';
 import { useUser } from '@app/hooks/useUser';
-import axios from 'axios';
+import axios from '@app/marcoshax/axiosproxy';
 import { useEffect, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 

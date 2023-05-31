@@ -8,9 +8,9 @@ import { OpenPgpLink } from '@app/components/Settings/Notifications/Notification
 import SettingsBadge from '@app/components/Settings/SettingsBadge';
 import { useUser } from '@app/hooks/useUser';
 import globalMessages from '@app/i18n/globalMessages';
+import axios from '@app/marcoshax/axiosproxy';
 import { ArrowDownOnSquareIcon } from '@heroicons/react/24/outline';
 import type { UserSettingsNotificationsResponse } from '@server/interfaces/api/userSettingsInterfaces';
-import axios from 'axios';
 import { Form, Formik } from 'formik';
 import { useRouter } from 'next/router';
 import { defineMessages, useIntl } from 'react-intl';

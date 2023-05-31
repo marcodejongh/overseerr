@@ -1,7 +1,7 @@
 import Button from '@app/components/Common/Button';
 import globalMessages from '@app/i18n/globalMessages';
+import axios from '@app/marcoshax/axiosproxy';
 import { CheckIcon, TrashIcon } from '@heroicons/react/24/solid';
-import axios from 'axios';
 import { defineMessages, useIntl } from 'react-intl';
 import { mutate } from 'swr';
 

@@ -11,10 +11,10 @@ import { LanguageContext } from '@app/context/LanguageContext';
 import { SettingsProvider } from '@app/context/SettingsContext';
 import { UserContext } from '@app/context/UserContext';
 import type { User } from '@app/hooks/useUser';
+import axios from '@app/marcoshax/axiosproxy';
 import '@app/styles/globals.css';
 import { polyfillIntl } from '@app/utils/polyfillIntl';
 import type { PublicSettingsResponse } from '@server/interfaces/api/settingsInterfaces';
-import axios from 'axios';
 import type { AppInitialProps, AppProps } from 'next/app';
 import App from 'next/app';
 import Head from 'next/head';
@@ -189,7 +189,9 @@ CoreApp.getInitialProps = async (initialProps) => {
   if (ctx.res) {
     // Check if app is initialized and redirect if necessary
     const response = await axios.get<PublicSettingsResponse>(
-      `http://localhost:${process.env.PORT || 5055}/api/v1/settings/public`
+      `http://localhost:${
+        process.env.PORT || 5055
+      }/overseerr/api/v1/settings/public`
     );
 
     currentSettings = response.data;
@@ -197,9 +199,9 @@ CoreApp.getInitialProps = async (initialProps) => {
     const initialized = response.data.initialized;
 
     if (!initialized) {
-      if (!router.pathname.match(/(setup|login\/plex)/)) {
+      if (!router.pathname.match(/\/overseerr\/(setup|login\/plex)/)) {
         ctx.res.writeHead(307, {
-          Location: '/setup',
+          Location: '/overseer/setup',
         });
         ctx.res.end();
       }
@@ -207,7 +209,9 @@ CoreApp.getInitialProps = async (initialProps) => {
       try {
         // Attempt to get the user by running a request to the local api
         const response = await axios.get<User>(
-          `http://localhost:${process.env.PORT || 5055}/api/v1/auth/me`,
+          `http://localhost:${
+            process.env.PORT || 5055
+          }/overseerr/api/v1/auth/me`,
           {
             headers:
               ctx.req && ctx.req.headers.cookie
@@ -217,9 +221,9 @@ CoreApp.getInitialProps = async (initialProps) => {
         );
         user = response.data;
 
-        if (router.pathname.match(/(setup|login)/)) {
+        if (router.pathname.match(/\/overseerr\/(setup|login)/)) {
           ctx.res.writeHead(307, {
-            Location: '/',
+            Location: '/overseerr',
           });
           ctx.res.end();
         }
@@ -227,9 +231,11 @@ CoreApp.getInitialProps = async (initialProps) => {
         // If there is no user, and ctx.res is set (to check if we are on the server side)
         // _AND_ we are not already on the login or setup route, redirect to /login with a 307
         // before anything actually renders
-        if (!router.pathname.match(/(login|setup|resetpassword)/)) {
+        if (
+          !router.pathname.match(/\/overseerr\/(login|setup|resetpassword)/)
+        ) {
           ctx.res.writeHead(307, {
-            Location: '/login',
+            Location: '/overseerr/login',
           });
           ctx.res.end();
         }
