@@ -72,7 +72,7 @@ const Setup = () => {
       </div>
       <div className="relative z-40 px-4 sm:mx-auto sm:w-full sm:max-w-4xl">
         <img
-          src="/logo_stacked.svg"
+          src="/overseerr/logo_stacked.svg"
           className="mb-10 max-w-full sm:mx-auto sm:max-w-md"
           alt="Logo"
         />

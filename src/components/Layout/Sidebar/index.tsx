@@ -152,7 +152,7 @@ const Sidebar = ({ open, setClosed }: SidebarProps) => {
                     <div className="flex flex-shrink-0 items-center px-2">
                       <span className="px-4 text-xl text-gray-50">
                         <a href="/">
-                          <img src="/logo_full.svg" alt="Logo" />
+                          <img src="/overseerr/logo_full.svg" alt="Logo" />
                         </a>
                       </span>
                     </div>
@@ -222,7 +222,7 @@ const Sidebar = ({ open, setClosed }: SidebarProps) => {
               <div className="flex flex-shrink-0 items-center">
                 <span className="px-4 text-2xl text-gray-50">
                   <a href="/">
-                    <img src="/logo_full.svg" alt="Logo" />
+                    <img src="/overseerr/logo_full.svg" alt="Logo" />
                   </a>
                 </span>
               </div>
